@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  easyposter:
+    build: ./easyposter
+    volumes:
+      - .:/var/easyposter
+    environment:
+      ENV: ${ENV}
+      DEV_API_KEY: uxNudVZqGZdKqaJiylLdOg
+      PROD_API_KEY: J4ipOcoW8rcnESHAvIPzBg
+    ports:
+      - '8080:8080'
+    command: 'php5 test.php'
